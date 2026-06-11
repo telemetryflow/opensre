@@ -29,6 +29,10 @@ modules above is re-exported here.
 
 from __future__ import annotations
 
+from tests.benchmarks.cloudopsbench.predictor.investigation_handoff import (
+    align_predictions_to_investigation,
+    apply_investigation_handoff,
+)
 from tests.benchmarks.cloudopsbench.predictor.llm_call import (
     _FENCED_JSON,
     _build_system_prompt,
@@ -81,6 +85,9 @@ __all__ = [
     "_crosses_blocked_concept_boundary",
     "_snap_fault_object",
     "_snap_root_cause",
+    # investigation handoff (B1)
+    "align_predictions_to_investigation",
+    "apply_investigation_handoff",
     # rerank
     "_RERANK_MIN_TOKEN_LEN",
     "_RERANK_STOPWORDS",
